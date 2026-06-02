@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f0e8d8;
+  font-family: cursive;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.Button {
+  color: aliceblue;
+}
+
+.eiei {
+  display: block;
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  text-align: left;
+  font-size: 26px;
+  background-color: rgb(54, 54, 54);
+  margin: 10px 0;
+  padding: 35px;
+  max-width: 800px;
+  margin: 0 auto;
+
+}
+
+.user-row {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 2px;
+}
+
+.username {
+  color: #4fb5da;
+}
+
+.name {
+  color: #f16725;
+}
+
+.detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.buttonnn {
+  flex-direction: column;
+  display: flex;
+  font-family: cursive;
+  margin: 20px 20px;
+  font-size: 25px;
+  background-color: rgb(54, 54, 54);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 15px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.buttonnn:hover {
+  color: #f16725;
+  background-color: #4fb5da;
+}
+
+.click-button {
+  display: block;
+  text-align: left;
+  margin: 5px;
+  font-size: 25px;
+  color: rgb(236, 236, 236);
+  background: rgb(54, 54, 54);
+  padding: 20px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.click-button:hover {
+  color: #f16725;
+  background-color: #4fb5da;
+}
+
+.loading {
+  text-align: center;
+  color: #f16725;
+  font-size: 50px;
+}
+
+.my-custom-face-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  color: #6e7679;
+  text-align: center;
+}
+
+.my-custom-face-container p:first-child {
+  font-size:30vw;
+  margin: 0;
+  line-height: 1;
+}
+
+.my-custom-face-container-click{
+  cursor: pointer;
+  color: #6e7679;
+  border: 2px solid #6e7679;
+  background: transparent;
+  padding: 12px 32px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.my-custom-face-container-click:hover{
+  background: #6e7679;
+  color: #f1ebdd;
+  transform: translateY(-2px);
+}
