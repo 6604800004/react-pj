@@ -14,8 +14,10 @@ body {
 }
 
 input {
+  width: 400px;
+  text-align: center;
   background: #00000041;
-  padding: 12px 80px;
+  padding: 12px 20px;
   border-radius: 14px;
   border: none;
   outline: none;
@@ -31,7 +33,7 @@ input {
 
 .click-button {
   display: flex;
-  gap: 5px;
+  width: 400px;
   padding: 18px 24px;
   background: #363636;
   color: white;

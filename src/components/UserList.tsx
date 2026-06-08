@@ -23,8 +23,8 @@ function UserList() {
     <div>
       <div className="search-container">
         <input
-          value={inputText}
-          onChange={(e) => setInputText(e.target.value)}
+          type="text"
+          onChange={(input) => setInputText(input.target.value)}
           placeholder="enter your name or username"
         />
       </div>
@@ -35,8 +35,7 @@ function UserList() {
           key={user.id}
           onClick={() => nav(`/user/${user.id}`)}
         >
-          <b>{user.name}</b>
-          <b> ({user.username})</b>
+          <b>{user.name} ({user.username})</b>
         </div>
       ))}
     </div>
