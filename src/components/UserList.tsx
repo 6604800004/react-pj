@@ -1,10 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import type { Tdata } from "../data/Data";
+import { type Tdata } from "../data/Data";
 import "../App.css";
 
 function UserList() {
-  const [data, setData] = useState<Tdata[]>([]);
+  const [ data, setData ] = useState<Tdata[]>([]);
+  const [ inputText, setInputText ] = useState("");
+  const filterData = data.filter((user) =>
+    user.username.toLowerCase().includes(inputText.toLowerCase()) ||
+    user.name.toLowerCase().includes(inputText.toLowerCase())
+  );
+
   const nav = useNavigate();
 
   useEffect(() => {
@@ -12,10 +18,17 @@ function UserList() {
       .then((res) => res.json())
       .then(setData);
   }, []);
-  
+
   return (
     <div>
-      {data.map((user) => (
+      <div className="search-container">
+        <input
+          value={inputText}
+          onChange={(e) => setInputText(e.target.value)}
+          placeholder="search by name or username"
+        />
+      </div>
+      {filterData.map((user) => (
         <div
           key={user.id}
           className="click-button"
