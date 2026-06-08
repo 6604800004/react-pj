@@ -25,19 +25,21 @@ function UserList() {
         <input
           value={inputText}
           onChange={(e) => setInputText(e.target.value)}
-          placeholder="search by name or username"
+          placeholder="enter your name or username"
         />
       </div>
+      <div className="list-container">
       {filterData.map((user) => (
         <div
-          key={user.id}
           className="click-button"
+          key={user.id}
           onClick={() => nav(`/user/${user.id}`)}
         >
           <b>{user.name}</b>
           <b> ({user.username})</b>
         </div>
       ))}
+    </div>
     </div>
   );
 }
